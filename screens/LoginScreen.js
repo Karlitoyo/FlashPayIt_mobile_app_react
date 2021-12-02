@@ -6,6 +6,7 @@ import {
   SafeAreaView,
   StyleSheet,
   TextInput,
+  Image,
 } from "react-native";
 
 const HomeScreen = ({ navigation, route }) => {
@@ -14,6 +15,12 @@ const HomeScreen = ({ navigation, route }) => {
   return (
     <View style={styles.header}>
       <Text>Welcome to FlashPayIt!</Text>
+      <View>
+        <Image
+          source={require("../assets/images/Flash-Logo.png")}
+          style={styles.image}
+        ></Image>
+      </View>
       <SafeAreaView>
         <TextInput
           style={styles.input}
@@ -54,6 +61,10 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: "center",
     justifyContent: "center",
+  },
+  image: {
+    height: 200,
+    width: 200,
   },
 });
 
