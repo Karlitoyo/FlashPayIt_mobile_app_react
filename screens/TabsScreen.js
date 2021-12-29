@@ -1,61 +1,21 @@
 import * as React from "react";
-import { Button, Text, View, ImageBackground, StyleSheet } from "react-native";
-import { NavigationContainer } from "@react-navigation/native";
-import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
+import HomeScreen from "./HomeScreen";
+import DealsScreen from "./DealsScreen";
+import QrScreen from "./QrScreen";
+import RewardsScreen from "./RewardsScreen";
+import SettingsScreen from "./SettingsScreen";
 
-const image = {
-  uri: "https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg",
-};
+<HomeScreen />;
 
-function RewardsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Details!</Text>
-    </View>
-  );
-}
+<DealsScreen />;
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1 }}>
-      <ImageBackground
-        source={image}
-        resizeMode="cover"
-        style={styles.image}
-      ></ImageBackground>
-    </View>
-  );
-}
+<QrScreen />;
 
-function SettingsScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Settings screen</Text>
-      <Button
-        title="Go to Details"
-        onPress={() => navigation.navigate("Details")}
-      />
-    </View>
-  );
-}
+<RewardsScreen />;
 
-function DealsScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Details!</Text>
-    </View>
-  );
-}
-
-function QRScreen() {
-  return (
-    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      <Text>Details!</Text>
-    </View>
-  );
-}
+<SettingsScreen />;
 
 const Tab = createBottomTabNavigator();
 
@@ -90,16 +50,9 @@ export default function AppPage() {
     >
       <Tab.Screen name="Home" component={HomeScreen} />
       <Tab.Screen name="Deals" component={DealsScreen} />
-      <Tab.Screen name="QR" component={QRScreen} />
+      <Tab.Screen name="QR" component={QrScreen} />
       <Tab.Screen name="Rewards" component={RewardsScreen} />
       <Tab.Screen name="Settings" component={SettingsScreen} />
     </Tab.Navigator>
   );
 }
-
-const styles = StyleSheet.create({
-  image: {
-    flex: 1,
-    justifyContent: "center",
-  },
-});

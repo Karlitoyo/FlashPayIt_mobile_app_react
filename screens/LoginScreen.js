@@ -9,7 +9,7 @@ import {
   Image,
 } from "react-native";
 
-const HomeScreen = ({ navigation, route }) => {
+const LoginScreen = ({ navigation }) => {
   const [text, onChangeText] = React.useState("");
   const [number, onChangeNumber] = React.useState(null);
   return (
@@ -68,4 +68,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeScreen;
+export default LoginScreen;
