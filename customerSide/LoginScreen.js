@@ -14,7 +14,7 @@ const LoginScreen = ({ navigation }) => {
   const [number, onChangeNumber] = React.useState(null);
   return (
     <View style={styles.header}>
-      <Text>Welcome to FlashPayIt!</Text>
+      <Text>Welcome to FlashLoyalty!</Text>
       <View>
         <Image
           source={require("../assets/images/Flash-Logo.png")}

@@ -1,19 +1,20 @@
 import React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import HomeScreen from "../screens/LoginScreen";
-import ProfileScreen from "../screens/Profile";
-import HomeApp from "../App";
-import AppPage from "../screens/TabsScreen";
+import HomeScreen from "../customerSide/LoginScreen";
+import ProfileScreen from "../customerSide/Profile";
+import BusienssLoginScreen from "../businessSide/BusinessLogin";
+import AppLanding from "../screens/AppLanding";
+import BusinessPage from "../businessSide/BusinessPage";
 
 const Stack = createNativeStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="Home">
+      <Stack.Navigator initialRouteName="AppPage">
         <Stack.Screen
-          name="Home"
+          name="Login"
           component={HomeScreen}
           options={{ title: "Login" }}
         />
@@ -23,14 +24,19 @@ function App() {
           options={{ title: "Profile" }}
         />
         <Stack.Screen
-          name="First"
-          component={HomeApp}
-          options={{ title: "First" }}
+          name="BusinessLogin"
+          component={BusienssLoginScreen}
+          options={{ title: "Business" }}
         />
         <Stack.Screen
           name="AppPage"
-          component={AppPage}
+          component={AppLanding}
           options={{ title: "FlashPayIt" }}
+        />
+        <Stack.Screen
+          name="BusinessPage"
+          component={BusinessPage}
+          options={{ title: "BusinessPage" }}
         />
       </Stack.Navigator>
     </NavigationContainer>

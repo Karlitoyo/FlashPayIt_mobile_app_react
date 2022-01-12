@@ -1,8 +1,24 @@
 import React from "react";
 import { Button, View, Text, StyleSheet, ScrollView } from "react-native";
 import Hotoffers from "../components/profilePageHotOffers";
+import { NavigationContainer } from "@react-navigation/native";
+import { createDrawerNavigator } from "@react-navigation/drawer";
+import { createStackNavigator } from "@react-navigation/stack";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import QrScreen from "./QrScreen";
+import HomeScreen from "./HomeScreen";
+import DealsScreen from "./DealsScreen";
 
 const ProfileScreen = ({ route, navigation }) => {
+  createHomeStack = () => {
+    <Stack.Navigator>
+      <Stack.Screen name="QRScreen" component={QrScreen} />
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Deals" component={DealsScreen} />
+    </Stack.Navigator>;
+  };
+
   return (
     <ScrollView>
       <View
@@ -28,12 +44,6 @@ const ProfileScreen = ({ route, navigation }) => {
               onPress={() => navigation.navigate("AppPage")}
             />
           </View>
-          <View style={styles.button}>
-            <Button
-              title="Logout"
-              onPress={() => navigation.navigate("Home")}
-            />
-          </View>
         </View>
       </View>
     </ScrollView>
@@ -44,9 +54,7 @@ export default ProfileScreen;
 
 const styles = StyleSheet.create({
   buttonStyle: {
-    flexDirection: "row",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
+    alignItems: "center",
     padding: 10,
     paddingHorizontal: 10,
     width: "70%",

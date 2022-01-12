@@ -1,11 +1,12 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import HomeScreen from "./HomeScreen";
-import DealsScreen from "./DealsScreen";
-import QrScreen from "./QrScreen";
-import RewardsScreen from "./RewardsScreen";
-import SettingsScreen from "./SettingsScreen";
+import HomeScreen from "../customerSide/HomeScreen";
+import DealsScreen from "../customerSide/DealsScreen";
+import QrScreen from "../customerSide/QrScreen";
+import RewardsScreen from "../customerSide/RewardsScreen";
+import SettingsScreen from "../customerSide/SettingsScreen";
+import TopBarNavigator from "../navigation/TopBarNavigator";
 
 <HomeScreen />;
 

@@ -1,11 +1,14 @@
 import * as React from "react";
 import { View, ImageBackground, StyleSheet } from "react-native";
+import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 const imageMap = {
   uri: "https://media.wired.com/photos/59269cd37034dc5f91bec0f1/master/pass/GoogleMapTA.jpg",
 };
 
-const HomeScreen = ({ navigation }) => {
+const Tab = createMaterialTopTabNavigator();
+
+const HomeScreen = () => {
   return (
     <View style={{ flex: 1 }}>
       <ImageBackground

@@ -10,6 +10,9 @@ const SettingsScreen = ({ navigation }) => {
         title="Go to Details"
         onPress={() => navigation.navigate("Details")}
       />
+      <View style={styles.button}>
+        <Button title="Logout" onPress={() => navigation.navigate("Login")} />
+      </View>
     </View>
   );
 };
