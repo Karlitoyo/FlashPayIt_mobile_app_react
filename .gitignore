@@ -15,4 +15,4 @@ web-build/
 
 # API keys
 
-*.env.js
+env.js
