@@ -4,6 +4,7 @@ import MapView, { Callout, Marker, Overlay } from "react-native-maps";
 import { StyleSheet, Text, View, Dimensions } from "react-native";
 import { GooglePlacesAutocomplete } from "react-native-google-places-autocomplete";
 import MapCarosel from "../components/MapsOverlLay";
+import api_key from "./env";
 
 export default function Homescreen() {
   const [pin, setPin] = useState({ latitude: 53.3498, longitude: -6.2603 });
@@ -32,7 +33,7 @@ export default function Homescreen() {
           });
         }}
         query={{
-          key: "AIzaSyAUAUJ2M09Pcs55oE8nuEi0VH6zWDELW2w",
+          key: api_key,
           language: "en",
           components: "country:ie",
           types: "establishment",
