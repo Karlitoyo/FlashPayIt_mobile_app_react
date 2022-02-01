@@ -1,11 +1,6 @@
 import React from "react";
 import { Button, View, Text, StyleSheet, ScrollView } from "react-native";
 import Hotoffers from "../components/profilePageHotOffers";
-import { NavigationContainer } from "@react-navigation/native";
-import { createDrawerNavigator } from "@react-navigation/drawer";
-import { createStackNavigator } from "@react-navigation/stack";
-import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import QrScreen from "./QrScreen";
 import HomeScreen from "./HomeScreen";
 import DealsScreen from "./DealsScreen";

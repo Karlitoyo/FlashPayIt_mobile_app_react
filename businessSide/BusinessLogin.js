@@ -40,7 +40,7 @@ const BusienssLoginScreen = ({ navigation }) => {
         title="Login"
         onPress={() => {
           /* 1. Navigate to the Details route with params */
-          navigation.navigate("BusinessPage", {
+          navigation.navigate("BusinessProfile", {
             itemId: 86.0,
             otherParam: "Welcome Jayesh",
           });

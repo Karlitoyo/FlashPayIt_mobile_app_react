@@ -12,10 +12,10 @@ app.use(express.json());
 
 app.post("/usersdb", async (req, res) => {
   try {
-    const { description } = req.body;
+    const { description, campaign, company, active } = req.body;
     const newToDo = await pool.query(
-      "INSERT INTO users (description) VALUES($1) RETURNING *",
-      [description]
+      "INSERT INTO users (description, campaign, company, active) VALUES ($1, $2, $3, $4) RETURNING *",
+      [description, campaign, company, active]
     );
 
     res.json(newToDo.rows[0]);

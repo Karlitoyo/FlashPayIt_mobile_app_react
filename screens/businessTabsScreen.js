@@ -1,25 +1,16 @@
 import * as React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Ionicons from "react-native-vector-icons/Ionicons";
-import HomeScreen from "../customerSide/HomeScreen";
-import DealsScreen from "../customerSide/DealsScreen";
-import QrScreen from "../customerSide/QrScreen";
-import RewardsScreen from "../customerSide/RewardsScreen";
-import SettingsScreen from "../customerSide/SettingsScreen";
+import BusinessPage from "../businessSide/BusinessPage";
+import BusinessProfile from "../businessSide/businessProfile";
 
-<HomeScreen />;
+<BusinessPage />;
 
-<DealsScreen />;
-
-<QrScreen />;
-
-<RewardsScreen />;
-
-<SettingsScreen />;
+<BusinessProfile />;
 
 const Tab = createBottomTabNavigator();
 
-export default function AppPage() {
+export default function BusinessAppPage() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
@@ -48,11 +39,8 @@ export default function AppPage() {
         tabBarInactiveTintColor: "gray",
       })}
     >
-      <Tab.Screen name="Home" component={HomeScreen} />
-      {/* <Tab.Screen name="Deals" component={DealsScreen} /> */}
-      <Tab.Screen name="QR" component={QrScreen} />
-      <Tab.Screen name="Rewards" component={RewardsScreen} />
-      <Tab.Screen name="Settings" component={SettingsScreen} />
+      <Tab.Screen name="Home" component={BusinessPage} />
+      <Tab.Screen name="Deals" component={BusinessProfile} />
     </Tab.Navigator>
   );
 }

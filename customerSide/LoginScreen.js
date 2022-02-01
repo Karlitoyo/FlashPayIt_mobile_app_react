@@ -14,7 +14,7 @@ const LoginScreen = ({ navigation }) => {
   const [number, onChangeNumber] = React.useState(null);
   return (
     <View style={styles.header}>
-      <Text>Welcome to FlashLoyalty!</Text>
+      <Text style={styles.words}>Welcome to FlashLoyalty!</Text>
       <View>
         <Image
           source={require("../assets/images/Flash-Logo.png")}
@@ -40,7 +40,7 @@ const LoginScreen = ({ navigation }) => {
         title="Login"
         onPress={() => {
           /* 1. Navigate to the Details route with params */
-          navigation.navigate("Details", {
+          navigation.navigate("AppPage", {
             itemId: 86.0,
             otherParam: "Welcome Jayesh",
           });
@@ -65,6 +65,9 @@ const styles = StyleSheet.create({
   image: {
     height: 200,
     width: 200,
+  },
+  words: {
+    fontSize: 30,
   },
 });
 
